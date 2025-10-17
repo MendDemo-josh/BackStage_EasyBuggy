@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-easybuggy
+  description: Backstage integration for EasyBuggy - a sample application for demonstrating security vulnerabilities
+  annotations:
+    github.com/project-slug: MendDemo-josh/BackStage_EasyBuggy
+    backstage.io/source-location: url:https://github.com/MendDemo-josh/BackStage_EasyBuggy/tree/main/
+    backstage.io/managed-by-location: url:https://github.com/MendDemo-josh/BackStage_EasyBuggy/blob/main/catalog-info.yaml
+    backstage.io/view-url: https://github.com/MendDemo-josh/BackStage_EasyBuggy
+    backstage.io/edit-url: https://github.com/MendDemo-josh/BackStage_EasyBuggy/edit/main/
+spec:
+  type: service
+  lifecycle: production
+  owner: mend-demo-team
+  system: security-demo
+  providesApis:
+    - easybuggy-api
+  consumesApis:
+    - backstage-catalog-api
+  dependsOn:
+    - resource:backstage
+  tags:
+    - security
+    - demo
+    - backstage
+    - easybuggy
