@@ -12,16 +12,6 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: mend-demo-team
+  owner: mend.io
   system: security-demo
-  providesApis:
-    - easybuggy-api
-  consumesApis:
-    - backstage-catalog-api
-  dependsOn:
-    - resource:backstage
-  tags:
-    - security
-    - demo
-    - backstage
-    - easybuggy
+
